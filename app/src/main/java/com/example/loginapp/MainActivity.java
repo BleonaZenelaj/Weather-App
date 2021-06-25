@@ -7,7 +7,7 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
     
     EditText editText;
-    Button button;
+    Button button, button2;
     ImageView imageView;
     TextView country_tx, city_tx, temp_tx, latitude_tx, longitude_tx, sunrise_tx, humidity_tx, sunset_tx, pressure_tx, windSpeed_tx;
 
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         imageView = findViewById(R.id.imageView);
         editText = findViewById(R.id.EditText);
         button = findViewById(R.id.button);
+        button2 = findViewById(R.id.button2);
         country_tx = findViewById(R.id.country);
         city_tx = findViewById(R.id.city);
         temp_tx = findViewById(R.id.temperature);
@@ -36,6 +37,18 @@ public class MainActivity extends AppCompatActivity {
                 findWeather();
             }
         });
+        
+         button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logoutActivity();
+            }
+        });
+    }
+    
+    public void logoutActivity() {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
     }
     
      public void findWeather() {
