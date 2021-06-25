@@ -26,4 +26,5 @@
     <string name="imageView4">Humidity</string>
     <string name="imageView6">Pressure</string>
     <string name="imageView7">Wind Speed</string>
+    <string name="button2">Log Out</string>
 </resources>
