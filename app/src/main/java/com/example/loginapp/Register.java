@@ -1,127 +1,34 @@
-package com.example.loginapp;
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/design_default_color_primary"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-import androidx.appcompat.app.AppCompatActivity;
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to our application!"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.481" />
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.TextUtils;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.Toast;
-
-public class Register extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
-    }
-}package com.example.loginapp;
-
-        import androidx.annotation.NonNull;
-        import androidx.appcompat.app.AppCompatActivity;
-
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.text.TextUtils;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.EditText;
-        import android.widget.ProgressBar;
-        import android.widget.TextView;
-        import android.widget.Toast;
-
-        import com.google.android.gms.tasks.OnCompleteListener;
-        import com.google.android.gms.tasks.Task;
-        import com.google.firebase.auth.AuthResult;
-        import com.google.firebase.auth.FirebaseAuth;
-
-public class Register extends AppCompatActivity {
-
-    EditText mFullName,mEmail,mPassword,mPhone;
-    Button mRegisterBtn;
-    Button mLoginBtn;
-    FirebaseAuth fAuth;
-    ProgressBar progressBar;
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
-
-        mFullName=findViewById(R.id.fullName) ;
-        mEmail =findViewById(R.id.Email) ;
-        mPassword = findViewById(R.id.Password);
-        mPhone = findViewById(R.id.Phone);
-        mRegisterBtn=findViewById(R.id.registerBtn);
-        mLoginBtn=findViewById(R.id.loginBtn);
-
-        fAuth=FirebaseAuth.getInstance();
-        progressBar=findViewById(R.id.progressBar);
-
-        if(fAuth.getCurrentUser() != null )
-        {
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
-            finish();
-        }
-
-        mRegisterBtn.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View w )
-            {
-                String email= mEmail.getText().toString().trim();
-                String password=mPassword.getText().toString().trim();
-
-                if(TextUtils.isEmpty(email))
-                {
-                    mEmail.setError("Email is required");
-                    return;
-                }
-
-                if(TextUtils.isEmpty(password))
-                {
-                    mEmail.setError("Password is required");
-                    return;
-                }
-
-                if(password.length()<8 )
-                {
-                    mPassword.setError("Password must be 8 characters long");
-                    return;
-                }
-
-                progressBar.setVisibility(View.VISIBLE);
-
-                //regjistrimi i Perdoruesit ne Firebase
-
-                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                                                                               @Override
-                                                                                               public void onComplete(@NonNull  Task<AuthResult> task) {
-
-                                                                                                   if(task.isSuccessful())
-                                                                                                   { Toast.makeText(Register.this, "User Created" , Toast.LENGTH_SHORT).show();
-                                                                                                       startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                                                                                                   }
-                                                                                                   else
-                                                                                                   {
-                                                                                                       Toast.makeText(Register.this, "Error!" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-                                                                                                       progressBar.setVisibility(View.GONE);
-                                                                                                   }
-                                                                                               }
-                                                                                           }
-                );
-            }
-
-        });
-        mLoginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Login.class));
-            }
-        });
-    }
-}
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="440dp"
+        android:text="butoniMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

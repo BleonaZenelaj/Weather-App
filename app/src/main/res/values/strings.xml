@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">loginApp</string>
+    <string name="Latitude">: </string>
+    <string name="Longitude">: </string>
+    <string name="Sunrise">: </string>
+    <string name="Humidity">: </string>
+    <string name="Sunset">: </string>
+    <string name="Pressure">: </string>
+    <string name="windSpeed">: </string>
+    <string name="EditText">Shkruani emrin e qytetit</string>
+    <string name="textView">welcome user</string>
+    <string name="button">Kliko këtu</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="temperature">temperature</string>
+    <string name="textView5">Latitude</string>
+    <string name="textView6">Longitude</string>
+    <string name="textView7">Humidity</string>
+    <string name="textView8">Sunrise</string>
+    <string name="textView9">Sunset</string>
+    <string name="textView10">Pressure</string>
+    <string name="textView11">Wind Speed</string>
+    <string name="imageView">Weather Icons</string>
+    <string name="imageView2">Sunrise</string>
+    <string name="imageView3">Sunset</string>
+    <string name="imageView4">Humidity</string>
+    <string name="imageView6">Pressure</string>
+    <string name="imageView7">Wind Speed</string>
+    <string name="button2">Log Out</string>
 </resources>
