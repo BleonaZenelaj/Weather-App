@@ -29,7 +29,7 @@ Android Studio 4.2.1
 	* Openweathermap
 * Konfigurim të permission në manifest
 	* INTERNET
-* Së paku një linear, relative dhe constraint layout
+* Constraint layout
 * Parsim te JSON
 * Së paku një librari të jashtme
 	* Picasso - A powerful image downloading and caching library for Android
