@@ -44,7 +44,7 @@ Android Studio 4.2.1
 ## Startimi i aplikacionit
 
 
-|  ![](https://media.giphy.com/media/GlHqE8EdVIhLwSe9bT/giphy.gif) | Second Header | ![](https://media.giphy.com/media/EKl4pqoPZvDU9XI2Us/giphy.gif) |
+|  ![](https://media.giphy.com/media/GlHqE8EdVIhLwSe9bT/giphy.gif) | ![](https://media.giphy.com/media/cJzHpSPICYOsCAOLeY/giphy.gif) | ![](https://media.giphy.com/media/EKl4pqoPZvDU9XI2Us/giphy.gif) |
 | :---: | :---: | :---: |
 | Regjistrimi i përdoruesit | Kyqja e Përdoruesit  |  Kërkimi i qytetit dhe rezultati  |
 
