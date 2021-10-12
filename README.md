@@ -22,9 +22,6 @@ Android Studio 4.2.1
 	* MainActivity
 	* LoginActivity
 	* RegisterActivity
-* Fragmente dhe menaxhim me ato
-	* LoginFragment
-	* RegisterFragment
 * Përdorimi i API
 	* Openweathermap
 * Konfigurim të permission në manifest
