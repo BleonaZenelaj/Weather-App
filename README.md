@@ -48,6 +48,6 @@ Android Studio 4.2.1
 
 ### Anëtarët e grupit
 
-[Eldin Veliji](https://github.com/EldinVeliji)
-
 [Bleona Zenelaj](https://github.com/BleonaZenelaj)
+
+[Eldin Veliji](https://github.com/EldinVeliji)
